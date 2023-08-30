@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:url" content="https://shubhamthecoder.vercel.app" />
 
         <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="5_7gNHePQh_Pa2pc4MluiFJEF4WAgp__0WMJg71wg_Q" />
         <title>Shubham The Coder | Web Developer</title>
       </Head>
       <body className={inter.className}>{children}</body>

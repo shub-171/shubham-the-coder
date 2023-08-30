@@ -31,7 +31,6 @@ export default function RootLayout({ children }) {
           content="Explore free frontend codes, templates, and web development resources. Discover hand-picked Amazon deals and discounts, get 20% off on Hostinger hosting, and explore web development services. Learn frontend and WordPress development through our YouTube channel." />
         <meta name="twitter:image" content="./twitter-image.png" />
         <meta name="twitter:url" content="https://shubhamthecoder.vercel.app" />
-
         <meta name="google-site-verification" content="5_7gNHePQh_Pa2pc4MluiFJEF4WAgp__0WMJg71wg_Q" />
         <meta name="robots" content="index, follow" />
         <title>Shubham The Coder | Web Developer</title>

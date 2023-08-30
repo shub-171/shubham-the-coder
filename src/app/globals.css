@@ -18,7 +18,6 @@ body {
 }
 
 .bgImg {
-  background: url(./shubham-the-coder-bg.png);
   min-height: 100vh !important;
   background-color: #fff;
   background-size: cover;

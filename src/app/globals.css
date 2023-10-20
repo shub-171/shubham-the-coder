@@ -68,7 +68,6 @@ body {
 
 #avatar {
   grid-area: avatar;
-  border-color: red;
   align-items: center;
   justify-items: center;
 }
@@ -116,7 +115,7 @@ body {
 
 /* content  */
 .content {
-  width: 50%;
+  width: 60%;
   margin: auto;
   display: flex;
   flex-direction: column;

@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  transition: all 0.3s;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -61,30 +63,35 @@ body {
     "avatar name"
     "avatar desc"
     "avatar social";
-    padding-bottom: 4rem;
+  padding-bottom: 4rem;
 }
+
 #avatar {
   grid-area: avatar;
   border-color: red;
   align-items: center;
   justify-items: center;
 }
+
 #avatar .avatarImg {
-  min-width: 100px!important;
-  width: 70%!important;
+  min-width: 100px !important;
+  width: 70% !important;
   height: auto;
 }
+
 #name {
   font-size: 7vw;
   grid-area: name;
   font-family: 'Bricolage Grotesque', sans-serif;
 }
+
 #desc {
   font-size: 3vw;
   font-weight: 300;
   grid-area: desc;
   font-family: 'Bricolage Grotesque', sans-serif;
 }
+
 #social {
   grid-area: social;
   display: flex;
@@ -92,92 +99,83 @@ body {
   justify-content: flex-start;
   gap: 1.2rem;
 }
-#social a{
+
+#social a {
   text-decoration: none;
   color: black;
 }
-#social a:hover{
+
+#social a:hover {
   color: #f1c018;
 }
-#social a svg{
+
+#social a svg {
   width: 1.7rem;
   height: 1.7rem;
 }
 
 /* content  */
-.Content {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;
-  grid-template-areas:
-    "youtube link1 "
-    "youtube link2 "
-    "youtube link3 "
-    "youtube link4 "
-    "youtube link5 ";
-  grid-gap: 1.3rem;
+.content {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
   text-align: center;
 }
-.Content a {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+
+.content a {
+  text-align: center;
+  text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  padding: 0.6em 0;
   color: #1a1311;
   background-color: #fffcf3;
   border: 0.1rem solid #1a1311;
 }
-.Content a:hover{
-  background-color: #25c7a4!important;
-  color: #1a1311!important;
-}
-#youtube {
-  overflow: hidden;
-  grid-area: youtube;
-  background-color: #fffcf3;
-  border: 0.1rem solid #1a1311;
-  padding: 1rem;
-  text-align: start;
-}
-#youtube iframe {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  margin-bottom: 0.5rem;
-}
-#youtube a{
-  border: none;
-  justify-content: start;
-  margin-top: 0.5rem;
-  display: inline-block;
-}
-#youtube a:hover{
-  background-color: transparent!important;
+
+.content a:hover {
+  background-color: #3ce4c0d7 !important;
+  color: #1a1311 !important;
+  animation: bounce 0.5s 1 linear;
 }
 
-#link1 {
-  grid-area: link1;
+@keyframes bounce {
+  0% {
+    transform: scale(0.9, 1.1);
+  }
+
+  25% {
+    transform: scale(1.1, 0.9);
+  }
+
+  50% {
+    transform: scale(0.9, 1.1);
+  }
+
+  75% {
+    transform: scale(1.1, 0.9);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
 }
-#link2 {
-  grid-area: link2;
-}
-#link3 {
-  grid-area: link3;
-}
-#link4 {
-  grid-area: link4;
-}
-#link5 {
-  grid-area: link5;
+
+.content .link:last-child {
   background-color: #1a1311;
   color: white;
 }
 
-.footer{
+
+.footer {
   padding-top: 4rem;
   text-align: center;
-  font-family: 'Montserrat', sans-serif;;
+  font-family: 'Montserrat', sans-serif;
+  ;
 }
 
 @media only screen and (width < 1100px) {
@@ -206,35 +204,35 @@ body {
   #avatar img {
     width: 35%;
   }
-  #name{
+
+  #name {
     font-size: 10vw;
+    text-align: center;
   }
-  #desc{
+
+  #desc {
     font-size: 7vw;
   }
-  #social{
-  justify-content: center;
-  gap: 1.7rem;
+
+  #social {
+    justify-content: center;
+    gap: 1.7rem;
   }
-  #social a svg{
+
+  #social a svg {
     width: 1.4rem;
     height: 1.4rem;
   }
-  .Content {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-    grid-template-areas:
-      "youtube"
-      "link1"
-      "link2"
-      "link3"
-      "link4"
-      "link5";
-  }
-  .Content a{
+
+  .Content a {
     font-size: 5vw;
   }
-  .footer{
+
+  .footer {
     font-size: 4vw;
+  }
+  .content {
+    width: 90% !important;
+    margin: auto;
   }
 }
